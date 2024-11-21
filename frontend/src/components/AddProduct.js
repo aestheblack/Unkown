@@ -1,10 +1,10 @@
 // src/components/AddProduct.js
-import React, { useState } from 'react';
-import { addProduct } from '../services/productService';
+import React, { useState } from "react";
+import { addProduct } from "../services/productService";
 
 const AddProduct = () => {
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(0);
   const [price, setPrice] = useState(0);
 
@@ -12,9 +12,9 @@ const AddProduct = () => {
     e.preventDefault();
     const productData = { name, description, quantity, price };
     await addProduct(productData);
-    alert('Товар добавлен');
-    setName('');
-    setDescription('');
+    alert("Товар добавлен");
+    setName("");
+    setDescription("");
     setQuantity(0);
     setPrice(0);
   };
